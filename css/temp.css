@@ -1,0 +1,49 @@
+body{
+  background-color:rgb(97, 111, 124);
+  color: rgb(246, 216, 218);
+}
+h1{
+text-align: center;
+}
+nav{
+width: 500px;
+height: 150px;
+display: flex;
+flex-direction: row;
+align-content: center ;
+
+}
+.navbox{
+width: 200px;
+flex: auto;
+}
+.container{
+/* Step 1: Set display to grid */
+  display:grid;
+/* Step 2: setup rows amd columns */
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 300px 900px 300;
+  grid-template-areas: 
+  "hd  hd     hd"
+  "sd  main   main "
+  "sd  ft     ft" ;
+  border: 2px solid black;
+  gap:10px;
+  margin: auto;
+}
+.box{
+border: 1px solid red;
+background: #F8FA9D;
+}
+/* Assign grid area below */
+.header{grid-area:hd;
+}
+.footer{grid-area:ft;
+}
+.sidebar{grid-area:sd;
+}
+.content{grid-area:main;
+font-size: 20pt;
+color: red;
+}
